@@ -67,14 +67,14 @@
     font-size: 80px;
 }
 
-.main-section > div > div{
+.delimiter{
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 60px;
 }
 
-.main-section > div > div > div{
+.delimiter > div{
     height: 1px;
     border: 2px solid white;
     width: 112px;
@@ -132,6 +132,52 @@
     border-radius: 10px;
 }
 
+.about-container{
+    background-color: #1abc9c;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.about-container > h1{
+    font-size: 60px;
+}
+
+.about-container > div:nth-child(3){
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.about-container > div:nth-child(3) > p{
+    width: 30%;
+    font-size: 25px;
+    margin: 10px;
+}
+
+.about-container > div:last-child{
+    height: 75px;
+    width: 300px;
+    margin: auto;
+    border: 2px solid white;    
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.about-container > div > a > img{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.about-container > div > a{
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+}
 
 @media only screen and (max-width: 1500px){
     .nav-bar > div{
@@ -176,6 +222,16 @@
         width: 330px;
         height: 240px;
         margin: 10px;
+    }
+
+    .about-container > div:nth-child(3){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-container > div:nth-child(3) > p{
+        width: 80%;
     }
 }
 
