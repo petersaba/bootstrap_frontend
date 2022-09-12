@@ -71,12 +71,14 @@
             ★
             <div></div>
         </div>
+        <!-- bad format info will be added here -->
+        <div class="bad-input" id="badInput"></div>
         <div>
-            <input type="text" placeholder="Full name" class="inputs">
-            <input type="text" placeholder="Email address" class="inputs">
-            <input type="text" placeholder="Phone number" class="inputs">
-            <textarea name="" id="" cols="30" rows="3" placeholder="Message" class="inputs"></textarea>
-            <button>Send</button>
+            <input type="text" placeholder="Full name" class="inputs" id="full_name">
+            <input type="text" placeholder="Email address" class="inputs" id="email">
+            <input type="text" placeholder="Phone number" class="inputs" id="phone">
+            <textarea name="" cols="30" rows="3" placeholder="Message" class="inputs" id="message"></textarea>
+            <button onclick="checkinput()">Send</button>
         </div>
     </section>
     <section class="footer-container">
@@ -99,5 +101,6 @@
     <section class="copyright">
         <p>Copyright © Your Website 2022</p>
     </section>
+    <script src="javascript/bootstrap.js"></script>
 </body>
 </html>

@@ -279,6 +279,11 @@
     color: white;
 }
 
+.bad-input{
+    background-color: red;
+    color: white;
+}
+
 @media only screen and (max-width: 1500px){
     .nav-bar > div{
         width: 1200px;
