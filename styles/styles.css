@@ -14,7 +14,18 @@
     position: fixed;
     width: 100%;
     font-weight: bold;
-    
+}
+
+.hamburger-menu{
+    background-color: #1abc9c;
+    visibility: hidden;
+    position: absolute;
+    border-radius: 10px;
+    border: 0;
+    color: white;
+    font-size: 16px;
+    height: 50px;
+    width: 80px;
 }
 
 .nav-bar > div{
@@ -225,6 +236,49 @@
     margin-bottom: 100px;
 }
 
+.footer-container{
+    background-color: #2c3e50;
+    padding: 100px 0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-container > div{
+    display: flex;
+}
+
+.footer-container > div > div{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 450px;
+    text-align: center;
+}
+
+.footer-container > div > div > h3{
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-container > div > div > p{
+    font-size: 22px;    
+}
+
+.footer-container > div > div > p > a{
+    color: #1abc9c;   
+}
+
+.copyright{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1a252f;
+    color: white;
+}
+
 @media only screen and (max-width: 1500px){
     .nav-bar > div{
         width: 1200px;
@@ -235,14 +289,14 @@
         height: 260px;
         margin: 10px;
     }
+
+    .footer-container > div > div{
+        width: 400px;
+    }
+
 }
 
 @media only screen and (max-width: 1300px){
-    /* .nav-bar > div{
-        justify-content: space-between;
-        width: 1100px;
-    } */
-
     .portfolio-container > div:last-child > img{
         width: 305px;
         height: 215px;
@@ -257,6 +311,10 @@
 
     .contact-section > div:last-child{
         width: 650px;
+    }
+
+    .footer-container > div > div{
+        width: 320px;
     }
 }
 
@@ -292,9 +350,43 @@
     .contact-section > div:last-child{
         width: 700px;
     }
+
+    .footer-container > div{
+        flex-direction: column;
+    }
+
+    .footer-container > div > div{
+        width: 700px;
+    }
+
+    .hamburger-menu{
+        visibility: visible;
+        position: static;
+    }
+
+    .nav-bar ul{
+        visibility: hidden;
+        position: absolute;
+    }
+
+    .nav-bar > div{
+        width: 700px;
+    }
+
+    .nav-bar > div > h1{
+        font-size: 18px;
+    }
 }
 
 @media only screen and (max-width: 770px){
+    .nav-bar > div{
+        width: 500px;
+    }
+
+    .nav-bar > div > h1{
+        font-size: 16px;
+    }
+
     .portfolio-container > div:last-child > img{
         width: 400px;
         height: 290px;
@@ -304,14 +396,31 @@
     .contact-section > div:last-child{
         width: 500px;
     }
+
+    .footer-container > div > div{
+        width: 500px;
+    }
 }
 
 @media only screen and (max-width: 570px){
+    .nav-bar > div{
+        width: 100%;
+    }
+
+    .hamburger-menu{
+        margin-right: 10px;
+    }
+
     .contact-section{
         padding: 0 15px;
     }
 
     .contact-section > div:last-child{
         width: 100%;
+    }
+
+    .footer-container > div > div{
+        width: 100%;
+
     }
 }
