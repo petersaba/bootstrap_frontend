@@ -282,6 +282,21 @@
 .bad-input{
     background-color: red;
     color: white;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.show-element{
+    visibility: visible;
+    position: static;
+}
+
+.hide-element{
+    visibility: hidden;
+    position: absolute;
 }
 
 @media only screen and (max-width: 1500px){

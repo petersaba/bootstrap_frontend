@@ -1,18 +1,30 @@
 function checkinput(){
-    let message = document.getElementById("badInput").innerText
-    message = ""
+    let message = ""
     if (checkName() == false){
-        message += "name format is wrong "
+        message += "name format is wrong. "
     }
     if (checkEmail() == false){
-        message += "Email format is wrong "
+        message += "Email format is wrong. "
     }
     if (checkPhone() == false){
-        message += "Phone format is wrong "
+        message += "Phone format is wrong. "
     }
     if (checkText() == false){
-        message += "Message should be at least 100 characters "
+        message += "Message should be at least 100 characters. "
     }
+    if (message.length > 1){
+        document.getElementById("badInput").classList.remove("hide-element")
+        document.getElementById("badInput").classList.add("show-element")
+        let messageField = document.getElementById("badInputField").innerText = message
+    }else{
+        document.getElementById("badInput").classList.remove("show-element")
+        document.getElementById("badInput").classList.add("hide-element")
+    }
+    console.log(message)
+    console.log(checkName())
+    console.log(checkEmail())
+    console.log(checkPhone())
+    console.log(checkText())
 }
 
 function checkName(){
