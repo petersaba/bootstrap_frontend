@@ -15,6 +15,10 @@
     width: 100%;
     font-weight: bold;
 }
+/* this is for the messages page */
+.nav-bar > h1{
+    font-size: xx-large;
+}
 
 .hamburger-menu{
     background-color: #1abc9c;
