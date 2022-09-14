@@ -16,6 +16,7 @@ async function getData(){
     return returnedArr
 }
 
+// iterates through all retreived data and adds aach one as div to the parent container 
 function showData(data){
 
     let whereToAdd = document.getElementById("displayMessages")
@@ -33,6 +34,7 @@ function showData(data){
     }
 }
 
+// from each object it creates a div related to it
 function addParagToDiv(data, div){
     let parag = document.createElement("label")
     let content = document.createTextNode(data)
