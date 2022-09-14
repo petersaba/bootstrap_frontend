@@ -14,13 +14,16 @@ function checkinput(){
     }
     document.getElementById("badInput").classList.remove("hide-element")
     if (message.length > 1){
-        document.getElementById("badInput").classList.remove("good-format")
-        document.getElementById("badInput").classList.add("bad-format")
-        let messageField = document.getElementById("badInputField").innerText = message
+        switchToBadFormat()
+        document.getElementById("badInputField").innerText = message
     }else{
-        document.getElementById("badInput").classList.remove("bad-format")
-        document.getElementById("badInput").classList.add("good-format")
-        let messageField = document.getElementById("badInputField").innerText = "message sent successfully"
+        switchToGoodFormat()
+        if (insertData()){
+            document.getElementById("badInputField").innerText = "message sent successfully"
+        }else{
+            switchToBadFormat()
+            document.getElementById("badInputField").innerText = "There was an error please try again"
+        }
     }
     console.log(message)
     console.log(checkName())
@@ -58,4 +61,33 @@ function checkPhone(){
 function checkText(){
     let message = document.getElementById("message").value
     return message.length < 100 ? false : true
+}
+
+// 2 functions to alternate between styles for the div that shows the result of the submit
+function switchToGoodFormat(){
+    document.getElementById("badInput").classList.remove("bad-format")
+    document.getElementById("badInput").classList.add("good-format")
+}
+
+function switchToBadFormat(){
+    document.getElementById("badInput").classList.remove("good-format")
+    document.getElementById("badInput").classList.add("bad-format")
+}
+
+async function insertData(){
+    let full_name = document.getElementById("full_name").value
+    let email = document.getElementById("email").value
+    let phone = document.getElementById("phone").value
+    let message = document.getElementById("message").value
+
+    let response = await fetch("http://localhost/insertdata.php",{
+                                method : "POST",
+                                headers :{
+                                    "Content-Type" : "application/x-www-form-urlencoded"
+                                },
+                                body : "full_name=" + full_name + "&email=" + email + "&phone=" + phone + "&message=" + message
+                            })
+    let data = await response.json()
+    console.log(data.success)
+    return data.success
 }
