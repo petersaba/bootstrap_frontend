@@ -305,6 +305,29 @@
     position: absolute;
 }
 
+
+.messages-container > div{
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    padding: 20px 10px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    color: #2c3e50;
+    background-color: #1abc9c;
+    border-radius: 15px;
+}
+
+.messages-container > div:first-child{
+    padding-top: 150px;
+}
+
+.messages-container > idv > label:last-child{
+    width: 30%;
+}
+
 @media only screen and (max-width: 1500px){
     .nav-bar > div{
         width: 1200px;
