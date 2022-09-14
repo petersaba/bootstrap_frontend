@@ -280,18 +280,20 @@
 }
 
 .bad-input{
-    background-color: red;
+
     color: white;
-    width: 500px;
     display: flex;
     align-items: center;
     padding: 10px;
     border-radius: 10px;
 }
 
-.show-element{
-    visibility: visible;
-    position: static;
+.bad-format{
+    background-color: red;
+}
+
+.good-format{
+    background-color: lightgreen;
 }
 
 .hide-element{

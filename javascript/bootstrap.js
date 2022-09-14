@@ -12,13 +12,15 @@ function checkinput(){
     if (checkText() == false){
         message += "Message should be at least 100 characters. "
     }
+    document.getElementById("badInput").classList.remove("hide-element")
     if (message.length > 1){
-        document.getElementById("badInput").classList.remove("hide-element")
-        document.getElementById("badInput").classList.add("show-element")
+        document.getElementById("badInput").classList.remove("good-format")
+        document.getElementById("badInput").classList.add("bad-format")
         let messageField = document.getElementById("badInputField").innerText = message
     }else{
-        document.getElementById("badInput").classList.remove("show-element")
-        document.getElementById("badInput").classList.add("hide-element")
+        document.getElementById("badInput").classList.remove("bad-format")
+        document.getElementById("badInput").classList.add("good-format")
+        let messageField = document.getElementById("badInputField").innerText = "message sent successfully"
     }
     console.log(message)
     console.log(checkName())
